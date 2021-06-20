@@ -1,0 +1,114 @@
+@import "../../assets/variables";
+
+.cart {
+  position: fixed;
+  z-index: 1500;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: map-get($palette, menu-bg);
+  width: 100%;
+  max-width: 550px;
+  height: 100%;
+  overflow-x: auto;
+  backdrop-filter: none;
+
+  &__main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  &__head {
+    position: fixed;
+    z-index: 10;
+    background-color: inherit;
+    width: 100%;
+    max-width: 550px;
+  }
+
+  &__title {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: inherit;
+    width: 100%;
+    padding: 20px 0;
+
+    &__close {
+      position: absolute;
+      top: 20px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border: 1px solid map-get($palette, icon-border);
+      border-radius: 9999px;
+      cursor: pointer;
+    }
+
+    h1 {
+      background-color: inherit;
+      margin-bottom: 0;
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.2;
+      text-align: center;
+      color: #696969;
+      letter-spacing: 1px;
+    }
+  }
+
+  &__currency-wrapper {
+    background-color: inherit;
+    width: 100%;
+    margin: 10px 0;
+
+    select {
+      background-color: map-get($palette, pure);
+      padding: 7px 20px 7px 10px;
+    }
+  }
+
+  &__items-wrapper {
+    display: flex;
+    flex-direction: column;
+    background-color: inherit;
+    width: 100%;
+    margin-top: 110px;
+    margin-bottom: 140px;
+  }
+
+  &__footer {
+    position: fixed;
+    z-index: 1;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 550px;
+    padding: 15px;
+    border-top: 1px solid #D0D0D0;
+    box-shadow: 0 -4px 12px #02020238;
+
+    > p {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      padding: 0 0 10px ;
+
+      > span:last-child {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.checkout {
+  max-width: 100%;
+}

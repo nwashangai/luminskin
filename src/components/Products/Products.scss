@@ -1,0 +1,26 @@
+@import "../../assets/variables";
+
+.products {
+  background-color: map-get($palette, product-bg);
+  width: 100%;
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: inherit;
+    width: 100%;
+    max-width: 1300px;
+    margin: 10px auto;
+    flex-wrap: wrap;
+  }
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 0;
+
+  > span {
+    background-color: map-get($palette, product-bg)
+  }
+}

@@ -1,0 +1,36 @@
+@import 'sass-rem';
+@import './assets/variables';
+
+p {
+  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding: 0;
+}
+
+.App {
+  text-align: center;
+}
+
+main {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.cart-modal {
+  display: flex;
+  justify-content: flex-end;
+}
+
+#root {
+  background-color: map-get($palette, body);
+}
+
+.sell-button {
+  background: map-get($palette, primary);
+  width: rem(110px);
+  border: rem(1px) solid map-get($palette, primary);
+  border-radius: rem(40px);
+  font-weight: bold;
+}

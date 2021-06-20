@@ -1,0 +1,16 @@
+{
+	"singleQuote": true,
+	"trailingComma": "all",
+	"tabWidth": 2,
+	"eslintIntegration": true,
+	"destructuring-assignment": false,
+	"prettier.stylelintIntegration": true,
+	"selector-no-vendor-prefix": false,
+	"indentation": 2,
+	"extends": [
+		"plugin:prettier/recommended",
+		"prettier/flowtype",
+		"prettier/react",
+		"prettier/standard"
+	]
+}

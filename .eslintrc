@@ -1,0 +1,94 @@
+{
+	"env": {
+		"browser": true,
+		"es6": true,
+		"node": true,
+		"jest": true
+	},
+	"extends": ["airbnb", "prettier", "plugin:prettier/recommended"],
+	"plugins": ["babel", "prettier", "react"],
+	"parserOptions": {
+		"sourceType": "module",
+		"ecmaVersion": 2018,
+		"ecmaFeatures": {
+			"experimentalObjectRestSpread": true,
+			"experimentalDecorators": true,
+			"jsx": true
+		}
+	},
+	"parser": "babel-eslint",
+	"rules": {
+		"semi": ["error", "always"],
+		"react/prop-types": "off",
+		"no-nested-ternary":"off",
+		"no-unused-vars": "off",
+		"react/jsx-props-no-spreading": "off",
+		"jsx-a11y/anchor-is-valid": "off",
+		"quotes": [2, "single", {
+			"avoidEscape": true
+		}],
+		"comma-dangle": 1,
+		"react/destructuring-assignment": [
+			0,
+			"always",
+			{
+				"ignoreClassFields": true
+			}
+		],
+		"react/prefer-stateless-function": [0, {
+			"ignorePureComponents": true
+		}],
+		"jsx-a11y/click-events-have-key-events": "off",
+		"jsx-a11y/no-static-element-interactions": "off",
+		"arrow-body-style": [2, "as-needed"],
+		"no-restricted-globals": ["off", "history"],
+		"consistent-return": "error",
+		"curly": ["error", "multi-line"],
+		"no-param-reassign": "error",
+		"import/no-unresolved": [
+			2,
+			{
+				"commonjs": true
+			}
+		],
+		"no-shadow": [
+			"error",
+			{
+				"allow": ["req", "res", "err", "error"]
+			}
+		],
+		"valid-jsdoc": [
+			"error",
+			{
+				"requireReturn": true,
+				"requireReturnType": true,
+				"requireParamDescription": true,
+				"requireReturnDescription": true
+			}
+		],
+		"require-jsdoc": [
+			"error",
+			{
+				"require": {
+					"FunctionDeclaration": false,
+					"MethodDefinition": false,
+					"ClassDeclaration": false
+				}
+			}
+		],
+		"prettier/prettier": [
+			"error",
+			{
+				"tailingComma": "none",
+				"printWidth": 120
+			}
+		]
+	},
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"moduleDirectory": ["node_modules", "src/"]
+			}
+		}
+	}
+}

@@ -1,0 +1,140 @@
+@import "../../assets/variables";
+
+.header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 5px  40px;
+  box-shadow: 0 2px 3px -3px map-get($palette, shadow);
+
+  &__nav-mobile {
+    position: fixed;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    background-color: map-get($palette, menu-bg);
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 0;
+
+    &__close {
+      position: absolute;
+      top: 30px;
+      right: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border: 1px solid map-get($palette, icon-border);
+      border-radius: 9999px;
+    }
+
+    span {
+      width: 100%;
+      padding: 10px 40px;
+      font-size: 25px;
+    }
+  }
+
+  &__controls {
+    position: relative;
+    display: flex;
+
+    > a, > span {
+      margin-right: 20px;
+      padding: 14px 10px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+
+    &__cart {
+      width: 25px;
+      min-width: 25px;
+      height: 21px;
+      cursor: pointer;
+    }
+
+    &__cart-count {
+      position: absolute;
+      top: 5px;
+      right: 20px;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+      width: 163px;
+      height: 44px;
+      margin-right: 4rem;
+    }
+
+    > .menu {
+      position: relative;
+      bottom: 1px;
+      display: none;
+      background-color: transparent;
+      width: 16px;
+      margin-right: 15px;
+      padding: 0rem;
+      border: 0;
+      cursor: pointer;
+
+      > p {
+        background-color: map-get($palette, menu-off);
+        height: 1px;
+        margin-bottom: 4px;
+        font-size: .8125rem;
+        font-weight: 400;
+        line-height: 1.7;
+      }
+    }
+
+    > a:not(:first-child) {
+      margin-right: 20px;
+      padding: 14px 16px;
+      font-size: 14px;
+      line-height: 17px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 8px  20px 0;
+
+    &__nav {
+      &__logo {
+        display: none;
+      }
+
+      > .menu {
+        display: block;
+        outline: none;
+      }
+
+      > a:not(:first-child) {
+        display: none;
+      }
+    }
+
+    &__nav-mobile {
+      display: flex;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.left {
+  width: 15px;
+  height: 15px;
+  margin-right: 2px;
+}

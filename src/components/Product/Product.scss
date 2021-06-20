@@ -1,0 +1,62 @@
+@import '../../assets/variables';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: inherit;
+  width: 33.33%;
+  padding: 48px 32px;
+  text-align: center;
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: inherit;
+  }
+
+  &__image {
+    background-color: inherit;
+    width: auto;
+    max-width: 100%;
+    max-height: 170px;
+    margin-bottom: 30px;
+  }
+
+  &__name, &__price {
+    background-color: inherit;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__name {
+    margin: 8px 0;
+  }
+
+  &__price {
+    margin: 8px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    width: 50%;
+    padding: 40px 8px;
+
+    &__image {
+      max-width: 100%;
+      max-height: 170px;
+      object-fit: contain;
+    }
+  }
+}
+
+.lazy-load-image-background {
+  background-color: inherit;
+  margin-bottom: 30px;
+
+  * {
+    background-color: inherit;
+  }
+}

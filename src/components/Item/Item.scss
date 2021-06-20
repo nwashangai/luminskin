@@ -1,0 +1,79 @@
+@import "../../assets/variables";
+
+.item {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: map-get($palette, pure);
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+
+  * {
+    background-color: inherit;
+  }
+
+  &__description {
+    width: 65%;
+    min-height: 100px;
+    margin-top: 5px;
+    font-size: 10px;
+    line-height: 18px;
+    color: map-get($palette, secondary);
+    letter-spacing: .02px;
+  }
+
+  &__title {
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+
+  &__price {
+    font-size: 13px;
+    font-weight: lighter;
+  }
+
+  &__counts {
+    display: flex;
+    justify-content: space-between;
+    width: 76px;
+    padding: 7px;
+    border: 0.5px solid map-get($palette, card-border);
+
+    > span {
+      font-size: 15px;
+    }
+
+    > span:first-child,
+    > span:last-child {
+      cursor: pointer;
+    }
+  }
+
+  &__controls {
+    margin-top: 10px;
+  }
+
+  &__img-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    max-height: 105px;
+    padding-right: 15px;
+    color: map-get($palette, img-wrapper);
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 15px;
+    cursor: pointer;
+  }
+}
